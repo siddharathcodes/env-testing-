@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 async function createdatabase(){
-   await mongoose.connect(MONGODB_URL);
+   await mongoose.connect(process.env.MONGODB_URL);
     console.log('database has been connected');
 }
 
