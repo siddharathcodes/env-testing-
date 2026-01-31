@@ -3,6 +3,7 @@ const express = require("express");
 const  createdatabase = require('./database/index.js');
  createdatabase();
 const app = express();
+app.use(express.json());
 
 app.get('/hello',(req,res)=>{
     res.json({
@@ -11,6 +12,7 @@ app.get('/hello',(req,res)=>{
 })
 
 app.post('/hello',(req,res)=>{
+    console.log(req.body);
     res.json({
         message: "omg i made  my frist server"
     })
