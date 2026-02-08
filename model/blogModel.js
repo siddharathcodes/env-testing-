@@ -1,25 +1,21 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
 
-const blogSchema = new Schema({
-    title :{
-        type : String,
-        required :true,
-    },
-    subtitle :{
-        type :String,
-    },
+const blogSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  subtitle: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+  image: {
+    type: String,
+  },
+});
 
-    description:{
-        type : String,
-    },
-    image :{
-        type : String,
-    }
+const Blog = mongoose.model("Blog", blogSchema); // ✅ correct
 
-    
-})
-
-const BLOG = mangoose.Schema('BLOG',"blogSchema");
-
-modeule.export = BLOG;
+module.exports = Blog; // ✅ correct
