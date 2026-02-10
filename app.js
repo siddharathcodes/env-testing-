@@ -27,7 +27,7 @@ app.post("/hello",upload.single("image"), async(req,res) =>{
     image : filename
    })
     res.json({
-        message:"you  made first get api"
+        message:"api hit succesfully"
     })
 })
 
